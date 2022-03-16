@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center mb-10">
+  <div class="flex justify-center mb-10 lg:max-w-3xl m-auto">
     <div class="nes-select is-dark flex-1">
       <select required id="cluster" v-model="chosenCluster">
         <option :value="Cluster.Mainnet">Mainnet</option>

@@ -1,6 +1,6 @@
 <template>
   <ConfigPane />
-  <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
+  <div v-if="!wallet" class="text-center">Connect Your Wallet to continue/div>
   <div v-else>
     <!--bank address-->
     <div class="nes-container with-title mb-10">
@@ -37,9 +37,9 @@
           @selected="handleWalletSelected"
         />
         <!--mid-->
-        <div class="m-2 flex flex-col">
-          <ArrowButton class="my-2" @click="moveNFTsFE(false)" />
-          <ArrowButton class="my-2" :left="true" @click="moveNFTsFE(true)" />
+        <div class="m-2 flex flex-col ">
+          <ArrowButton class="my-2 text-black" @click="moveNFTsFE(false)" />
+          <ArrowButton class="my-2 bg-black" :left="true" @click="moveNFTsFE(true)" />
         </div>
         <!--right-->
         <NFTGrid
@@ -52,7 +52,7 @@
             v-if="vaultLocked"
             class="locked flex-col justify-center items-center align-center"
           >
-            <p class="mt-10">This vault is locked!</p>
+            <p class="mt-10">Your WOOFers are now staked!</p>
           </div>
         </NFTGrid>
       </div>

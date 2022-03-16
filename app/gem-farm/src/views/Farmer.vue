@@ -1,29 +1,24 @@
 <template>
-  <ConfigPane />
-  <div v-if="!wallet" class="text-center">Pls connect (burner) wallet</div>
+  <div class="farmstyle">
+      <ConfigPane />
+      
+  <div v-if="!wallet" class="text-center">Connect Your Wallet</div>
+  
   <div v-else>
     <!--farm address-->
     <div class="nes-container with-title mb-10">
       <p class="title">Connect to a Farm</p>
       <div class="nes-field mb-5">
         <label for="farm">Farm address:</label>
-        <input id="farm" class="nes-input" v-model="farm" />
+        <input id="farm" class="nes-input" v-model="farm"/>
       </div>
     </div>
 
-    <div v-if="farmerAcc">
-      <FarmerDisplay
-        :key="farmerAcc"
-        :farm="farm"
-        :farmAcc="farmAcc"
-        :farmer="farmer"
-        :farmerAcc="farmerAcc"
-        class="mb-10"
-        @refresh-farmer="handleRefreshFarmer"
-      />
+    <div v-if="farmerAcc" class="lg:flex lg:flex-row justify-center m-auto">
+
       <Vault
         :key="farmerAcc"
-        class="mb-10"
+        class="mb-10 flex lg:flex-row"
         :vault="farmerAcc.vault.toBase58()"
         @selected-wallet-nft="handleNewSelectedNFT"
       >
@@ -56,7 +51,7 @@
           End cooldown
         </button>
         <button class="nes-btn is-warning" @click="claim">
-          Claim {{ availableA }} A / {{ availableB }} B
+          Claim {{ availableA }} $WOOF
         </button>
       </Vault>
     </div>
@@ -70,6 +65,7 @@
         </button>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -263,4 +259,6 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

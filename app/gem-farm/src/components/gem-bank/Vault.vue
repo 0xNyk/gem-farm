@@ -1,6 +1,7 @@
 <template>
-  <!--control buttons-->
-  <div class="mb-10 flex justify-center">
+  <div class="flex flex-col">
+      <!--control buttons-->
+  <div class="mb-10 flex lg:flex-row justify-center">
     <button
       v-if="
         (toWalletNFTs && toWalletNFTs.length) ||
@@ -15,7 +16,7 @@
   </div>
 
   <!--wallet + vault view-->
-  <div class="flex items-stretch">
+  <div class="flex flex-col items-stretch">
     <!--left-->
     <NFTGrid
       title="Your wallet"
@@ -28,12 +29,12 @@
     <div class="m-2 flex flex-col">
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class="my-2 rotate-90"
         @click="moveNFTsFE(false)"
       />
       <ArrowButton
         :disabled="vaultLocked"
-        class="my-2"
+        class="my-2 rotate-90"
         :left="true"
         @click="moveNFTsFE(true)"
       />
@@ -51,9 +52,10 @@
         v-if="vaultLocked"
         class="locked flex-col justify-center items-center align-center"
       >
-        <p class="mt-10">This vault is locked!</p>
+        <p class="mt-10">Your WOOFers are staked!</p>
       </div>
     </NFTGrid>
+  </div>
   </div>
 </template>
 

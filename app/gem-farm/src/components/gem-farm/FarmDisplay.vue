@@ -26,14 +26,7 @@
         title="Reward A"
       />
     </div>
-    <!--reward B-->
-    <div class="flex-1">
-      <RewardDisplay
-        :key="farmAcc.rewardB"
-        :reward="farmAcc.rewardB"
-        title="Reward B"
-      />
-    </div>
+
   </div>
 </template>
 
