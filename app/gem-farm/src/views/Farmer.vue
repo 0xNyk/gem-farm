@@ -14,11 +14,11 @@
       </div>
     </div>
 
-    <div v-if="farmerAcc" class="lg:flex lgflex-row justify-center m-auto">
+    <div v-if="farmerAcc" class="lg:flex lg:flex-row justify-center m-auto">
 
       <Vault
         :key="farmerAcc"
-        class="mb-10 flex"
+        class="mb-10 flex lg:flex-col"
         :vault="farmerAcc.vault.toBase58()"
         @selected-wallet-nft="handleNewSelectedNFT"
       >
@@ -50,7 +50,7 @@
         >
           End cooldown
         </button>
-        <button class="nes-btn is-warning" @click="claim">
+        <button class="nes-btn bg-purple-500 text-white" @click="claim">
           Claim {{ availableA }} $WOOF
         </button>
       </Vault>
@@ -60,7 +60,7 @@
         Farmer account not found :( Create a new one?
       </div>
       <div class="w-full text-center">
-        <button class="nes-btn is-primary" @click="initFarmer">
+        <button class="nes-btn bg-purple-500 text-white" @click="initFarmer">
           New Farmer
         </button>
       </div>

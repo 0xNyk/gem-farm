@@ -16,7 +16,7 @@
   </div>
 
   <!--wallet + vault view-->
-  <div class="flex flex-col items-stretch">
+  <div class="flex flex-col lg:flex-row items-stretch lg:mt-10">
     <!--left-->
     <NFTGrid
       title="Your wallet"

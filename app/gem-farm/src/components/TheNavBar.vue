@@ -6,6 +6,7 @@
       :title="i.name"
       :url="i.url"
       :class="{ active: path === i.url }"
+      :target="_blank"
     />
   </nav>
 </template>
@@ -22,7 +23,8 @@ export default defineComponent({
     const path = computed(() => route.path);
 
     const menu = [
-      { name: 'WOOF FARM', url: '/farmer' },
+      { name: 'HOME', url: '/' },
+      { name: 'WOOFer FARM', url: '/farmer' },
     ];
 
     return {
