@@ -14,11 +14,11 @@
       </div>
     </div>
 
-    <div v-if="farmerAcc" class="lg:flex lg:flex-row justify-center m-auto">
+    <div v-if="farmerAcc" class="lg:flex lgflex-row justify-center m-auto">
 
       <Vault
         :key="farmerAcc"
-        class="mb-10 flex lg:flex-row"
+        class="mb-10 flex"
         :vault="farmerAcc.vault.toBase58()"
         @selected-wallet-nft="handleNewSelectedNFT"
       >
