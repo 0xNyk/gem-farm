@@ -15,13 +15,22 @@
     </div>
 
     <div v-if="farmerAcc" class="lg:flex lg:flex-row justify-center m-auto">
-      <RefreshFarmer />
+      <FarmerDisplay
+        :key="farmerAcc"
+        :farm="farm"
+        :farmAcc="farmAcc"
+        :farmer="farmer"
+        :farmerAcc="farmerAcc"
+        class="mb-10"
+        @refresh-farmer="handleRefreshFarmer"
+      />
       <Vault
         :key="farmerAcc"
         class="mb-10 flex lg:flex-col"
         :vault="farmerAcc.vault.toBase58()"
         @selected-wallet-nft="handleNewSelectedNFT"
       >
+        
         <button
           v-if="farmerState === 'staked' && selectedNFTs.length > 0"
           class="nes-btn is-primary mr-5"
@@ -78,6 +87,7 @@ import { PublicKey } from '@solana/web3.js';
 import ConfigPane from '@/components/ConfigPane.vue';
 import FarmerDisplay from '@/components/gem-farm/FarmerDisplay.vue';
 import Vault from '@/components/gem-bank/Vault.vue';
+import RefreshFarmer from '@/components/gem-farm/RefreshFarmer.vue';
 import { INFT } from '@/common/web3/NFTget';
 import { findFarmerPDA, stringifyPKsAndBNs } from '@gemworks/gem-farm-ts';
 
