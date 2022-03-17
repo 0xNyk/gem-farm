@@ -15,7 +15,7 @@
     </div>
 
     <div v-if="farmerAcc" class="lg:flex lg:flex-row justify-center m-auto">
-
+      <RefreshFarmer />
       <Vault
         :key="farmerAcc"
         class="mb-10 flex lg:flex-col"
