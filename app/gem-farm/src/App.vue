@@ -21,7 +21,7 @@ export default {
 
 <style>
 * {
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'Fredoka One', cursive;
 }
 input[type='radio']:checked + span {
   @apply text-black;
