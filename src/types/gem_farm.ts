@@ -21,11 +21,6 @@ export type GemFarm = {
           "isSigner": false
         },
         {
-          "name": "farmTreasury",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
           "name": "rewardAPot",
           "isMut": true,
           "isSigner": false
@@ -115,6 +110,10 @@ export type GemFarm = {
               "defined": "MaxCounts"
             }
           }
+        },
+        {
+          "name": "farmTreasury",
+          "type": "publicKey"
         }
       ]
     },
@@ -399,6 +398,16 @@ export type GemFarm = {
           "name": "gemBank",
           "isMut": false,
           "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
         }
       ],
       "args": [
@@ -453,6 +462,11 @@ export type GemFarm = {
         {
           "name": "gemBank",
           "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
           "isSigner": false
         },
         {
@@ -654,6 +668,11 @@ export type GemFarm = {
         {
           "name": "gemBank",
           "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
           "isSigner": false
         }
       ],
@@ -1707,11 +1726,6 @@ export const IDL: GemFarm = {
           "isSigner": false
         },
         {
-          "name": "farmTreasury",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
           "name": "rewardAPot",
           "isMut": true,
           "isSigner": false
@@ -1801,6 +1815,10 @@ export const IDL: GemFarm = {
               "defined": "MaxCounts"
             }
           }
+        },
+        {
+          "name": "farmTreasury",
+          "type": "publicKey"
         }
       ]
     },
@@ -2085,6 +2103,16 @@ export const IDL: GemFarm = {
           "name": "gemBank",
           "isMut": false,
           "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
         }
       ],
       "args": [
@@ -2139,6 +2167,11 @@ export const IDL: GemFarm = {
         {
           "name": "gemBank",
           "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
           "isSigner": false
         },
         {
@@ -2340,6 +2373,11 @@ export const IDL: GemFarm = {
         {
           "name": "gemBank",
           "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "feeAcc",
+          "isMut": true,
           "isSigner": false
         }
       ],
